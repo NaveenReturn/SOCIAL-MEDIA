@@ -1,0 +1,26 @@
+*{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+.acters-section{
+  position: fixed;
+  width:100%;
+  height:100vh;
+  background:linear-gradient(to right,#000000e4,#000000db);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index:66;
+}
+.acters-rei{
+   max-width:600px;
+   border:1px solid rgb(200, 194, 194);
+   border-radius:10px;
+}
+.pho-vid{
+  width:200px;
+  height:100px;
+  overflow: hidden;
+}

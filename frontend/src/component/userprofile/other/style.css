@@ -1,0 +1,8 @@
+.subtitle-align{
+   background:#fc466f;
+   border-radius:10px;
+}
+.userView{
+  max-height:860px;
+  overflow-y: auto;
+}

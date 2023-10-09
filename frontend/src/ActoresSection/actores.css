@@ -1,0 +1,51 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.login-ac{
+  top:0;
+  position: sticky;
+  background:linear-gradient(to right,#000000bf,#000000b3);
+}
+.actores-form{
+    width:100%;
+      height:100vh;
+      background:linear-gradient(to right,#000000bf,#000000b3),url(../../public/img/Actores-bg.png)no-repeat;
+    }
+.actores-form form{
+   max-width:600px;
+   width:26rem;
+   border:1px solid rgb(235, 235, 235);
+    border-radius:8px;
+    position: relative;
+ }
+ .actores-form form::before{
+   content: "";
+   width:100px;
+   height:100px;
+   position: absolute;
+   background-color:#ffffff55;
+   top:-50px;
+   left:-50px;
+   border-radius:50%;
+ }
+  .actores-form form::after{
+   content: "";
+   width:100px;
+   height:100px;
+   position: absolute;
+   background-color:#ffffff55;
+   bottom:-50px;
+   right:-50px;
+   border-radius:50%;
+ }
+.actores-form form .input-st{
+  width:90%;
+  margin: auto;
+  border:none;
+  outline:none;
+  height:28px;
+  background-color:transparent;
+  border-bottom:1px solid #fff;
+}

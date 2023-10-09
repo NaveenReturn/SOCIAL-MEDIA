@@ -1,0 +1,106 @@
+import {createSlice} from '@reduxjs/toolkit';
+
+const StorySlice = createSlice({  
+      name:'story',
+      initialState:{
+         loading:false,
+         isAuthenticated:false                          
+      },
+      reducers:{
+          storyCreateRequest(state,action){
+              return{
+                  ...state,
+                  isAuthenticated:false                 
+              }                     
+          },
+          storySuccessRequest(state,action){
+             return{
+                  loading:false,
+                  isAuthenticated:true,
+                  storys:action.payload.story                 
+             }                      
+          },
+          storyFaildRequest(start,action){
+              return{
+                  loading:false,
+                  isAuthenticated:false,
+                  error:action.payload                 
+              }                     
+          },
+          getAllStoryRequest(state,action){
+              return{
+                  loading:true,
+                  isAuthenticated:false
+              }
+          },
+          getAllStorySuccess(state,action){
+            return{
+                loading:false,
+                isAuthenticated:true,
+                getAll:action.payload.story
+            }
+          },
+          getAllStoryFaild(state,action){
+             return{
+                loading:false,
+                isAuthenticated:false
+             }
+          },
+          getLoginUserStoryRequest(state,action){
+             return{
+                loading:true,
+                isAuthenticated:false
+             }
+          },
+          getLoginUserStorySuccess(state,action){
+             return{
+                loading:false,
+                isAuthenticated:true,
+                loginstory:action.payload.storylist
+             }
+          },
+          getLoginUserStoryFaild(state,action){
+             return{
+                loading:false,
+                isAuthenticated:false,
+                error:action.payload
+             }
+          },
+          getUpdateStoryRequest(state,action){
+             return{
+                loading:true,
+                isAuthenticated:false
+             }
+          },
+          getUpdateStorySuccess(state,action){
+             return{
+                loading:false,
+                isAuthenticated:true,
+                singlestory:action.payload.storys
+             }
+          },
+          getUpdateStoryFaild(state,action){
+             return{
+                loading:false,
+                isAuthenticated:false,
+                error:action.payload
+             }
+          }                         
+      }
+})
+export const {actions,reducer} = StorySlice;
+export const {storyCreateRequest,
+            storyFaildRequest,
+            storySuccessRequest,
+             getAllStoryFaild,getAllStoryRequest,
+             getAllStorySuccess,
+             getLoginUserStoryFaild,
+             getLoginUserStoryRequest,
+             getLoginUserStorySuccess,
+             getUpdateStoryRequest,
+             getUpdateStorySuccess,
+             getUpdateStoryFaild
+           
+        }=actions;
+
+export default reducer
